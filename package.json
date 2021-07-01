@@ -19,10 +19,11 @@
   },
   "homepage": "https://github.com/MohamadNezam/schoolAPI#readme",
   "dependencies": {
+    "core-util-is": "^1.0.2",
     "express": "^4.17.1",
     "mysql2": "^2.2.5"
   },
   "engines": {
-        "node": "v11.3.0"
+    "node": "v11.3.0"
   }
 }
