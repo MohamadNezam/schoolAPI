@@ -2,8 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
+ 
 const programmingLanguagesRouter = require('./routes/programmingLanguages');
-
+ 
 
 
 // parse requests of content-type: application/json
@@ -21,8 +22,8 @@ app.get('/', (req, res) => {
 })
 
 
-app.use('/programming-languages', programmingLanguagesRouter);
 
+app.use('/programming-languages', programmingLanguagesRouter);
 /* Error handler middleware */
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
