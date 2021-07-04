@@ -1,27 +1,27 @@
 {
-  "name": "schoolAPI",
+  "name": "schoolapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MohamadNezam/schoolAPI.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "nezam",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MohamadNezam/schoolAPI/issues"
-  },
-  "homepage": "https://github.com/MohamadNezam/schoolAPI#readme",
   "dependencies": {
-    "core-util-is": "^1.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mysql2": "^2.2.5"
+    "fastest-validator": "^1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.9",
+    "sequelize": "^6.6.4",
+    "sequelize-cli": "^6.2.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "engines": {
     "node": "v11.3.0"

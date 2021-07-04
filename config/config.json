@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "freedbtech_MHDNEZAM",
+    "password": "m.h.d.nizam",
+    "database": "freedbtech_SchoolManagementDB",
+    "host": "freedb.tech",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "freedbtech_MHDNEZAM",
+    "password": "m.h.d.nizam",
+    "database": "freedbtech_SchoolManagementDB",
+    "host": "freedb.tech",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "freedbtech_MHDNEZAM",
+    "password": "m.h.d.nizam",
+    "database": "freedbtech_SchoolManagementDB",
+    "host": "freedb.tech",
+    "dialect": "mysql"
+  }
+}
