@@ -7,8 +7,6 @@ const jwt = require('jsonwebtoken');
 
 
 
-
-
 function signUp(req, res){
    //Sign up
    models.User.findOne({where:{email:req.body.email}}).then(result => {
@@ -91,8 +89,9 @@ function index(req, res){
     });
 }
 
-function test(req,res){   
-        res.json({'message': 'ok'});   
+function test(req,res){ 
+    
+        res.json({'message': process.env.NODE_ENV});   
       
 }
 
