@@ -31,6 +31,7 @@ function signUp(req, res){
                    }).catch(error => {
                        res.status(500).json({
                            message: "Something went wrong!",
+                           error: error
                        });
                    });
                });
@@ -41,6 +42,7 @@ function signUp(req, res){
    }).catch(error => {
        res.status(500).json({
            message: "Something went wrong!",
+           error: error
        });
    });
 }

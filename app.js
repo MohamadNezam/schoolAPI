@@ -54,26 +54,64 @@ app.use(
  * @swagger
  * /user/sign-up:
  *   post:
- *     summary: Create a user.
+ *     summary: Creates a new user.
+ *     consumes:
+ *       - application/json
+ *     parameters:
+ *       - in: body
+ *         name: sign-up a user
+ *         description: Create a new user.
+ *         schema:
+ *           type: object
+ *           required:
+ *             - email
+ *           properties:
+ *             email:
+ *               type: string
+ *               example: test@hotmail.com
+ *             password:
+ *               type: string
+ *               example: Pa$$w0rd
+ *             firstName:
+ *               type: string
+ *               example: test
+ *             lastName:
+ *               type: string
+ *               example: test
+ *             mobilePhone:
+ *               type: string
+ *               example: 911111111
  *     responses:
  *       201:
  *         description: Created
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 data:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: integer
- *                       description: The user ID.
- *                       example: 0
- *                     email:
- *                       type: string
- *                       description: The user's email.
- *                       example: admin@admin.com
+*/
+
+/**
+ * @swagger
+ * /user/login:
+ *   post:
+ *     summary: Login.
+ *     consumes:
+ *       - application/json
+ *     parameters:
+ *       - in: body
+ *         name: login a user
+ *         description: login a user.
+ *         schema:
+ *           type: object
+ *           required:
+ *             - email
+ *             - password
+ *           properties:
+ *             email:
+ *               type: string
+ *               example: test@hotmail.com
+ *             password:
+ *               type: string
+ *               example: Pa$$w0rd
+ *     responses:
+ *       200:
+ *         description: Created
 */
 
 
