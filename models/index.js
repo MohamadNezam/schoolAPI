@@ -18,7 +18,12 @@ if (config.use_env_variable) {
 
   console.log("2");
   console.log(config);
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(config.database, config.username, config.password, 
+    { 
+      host: 'freedb.tech',
+      dialect:  'mysql' 
+    }
+    );
 }
 
 fs
