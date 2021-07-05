@@ -65,7 +65,8 @@ app.use("/user", userRoute);
 
 
 app.get('/', (req, res) => {
-    res.json({'message': 'ok'});
+ 
+    res.json({'message': `API link at http://localhost:${port}/api-docs/`});
   })
   
 
