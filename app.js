@@ -6,6 +6,10 @@ const port = process.env.PORT || 3000;
 const app = express();
 const userRoute = require('./routes/user');
 
+
+
+
+
 // Extended: https://swagger.io/specification/#infoObject
 const swaggerOptions = {
     swaggerDefinition: {
@@ -16,9 +20,12 @@ const swaggerOptions = {
         contact: {
           name: "Amazing Developer"
         },
+        
         servers: [`http://localhost:${port}`]
-      }
+      },
+      
     },
+    
     // ['.routes/*.js']
     apis: ["app.js"]
   };
@@ -40,16 +47,31 @@ app.use(
 
 // Routes
 
+
+
+
+app.use("/user", userRoute);
+
+
 /**
  * @swagger
- * /user:
+ * /:
  *  get:
- *    description: Use to request all users
+ *    description: Use to request all customers
  *    responses:
  *      '200':
  *        description: A successful response
- * 
  */
+
+
+app.get('/', (req, res) => {
+    res.json({'message': 'ok'});
+  })
+  
+
+module.exports = app;
+
+
 /**
  * @swagger
  * /user/sign-up:
@@ -86,6 +108,8 @@ app.use(
  *         description: Created
 */
 
+
+
 /**
  * @swagger
  * /user/login:
@@ -115,23 +139,27 @@ app.use(
 */
 
 
-app.use("/user", userRoute);
+/**
+ * @swagger
+ * /user:
+ *  get:
+ *    description: Use to request all users
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ * 
+ */
 
 
 /**
  * @swagger
- * /:
+ * /user/auth-user:
  *  get:
- *    description: Use to request all customers
+ *    security:              # <--- ADD THIS
+ *      - bearerAuth: []     # <--- ADD THIS
+ *    description: Use to request all users
  *    responses:
  *      '200':
  *        description: A successful response
+ * 
  */
-
-
-app.get('/', (req, res) => {
-    res.json({'message': 'ok'});
-  })
-  
-
-module.exports = app;

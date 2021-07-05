@@ -92,10 +92,15 @@ function index(req, res){
     });
 }
 
-function test(req,res){ 
-    
-        res.json({'message': process.env.NODE_ENV});   
-      
+function authUser(req,res){ 
+    models.User.findAll().then(result => {
+        res.status(200).json(result);
+    }).catch(error => {
+        res.status(500).json({
+            message: "Something went wrong!",
+            error: error
+        });
+    });        
 }
 
 
@@ -103,6 +108,6 @@ module.exports = {
    signUp: signUp,
    login: login,
    index: index,
-   test: test
+   authUser: authUser,
 }
 
