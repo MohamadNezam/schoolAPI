@@ -7,11 +7,11 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "freedbtech_MHDNEZAM",
-    "password": "m.h.d.nizam",
-    "database": "freedbtech_SchoolManagementDB",
-    "host": "freedb.tech",
-    "dialect": "mysql"
+    "username": "mqazggbyycczsa",
+    "password": "3798e9a7bc0b8f84a7953c6868322c1ae4a2a82ab404e9b4f1ccc0dcc26b06b8",
+    "database": "d26cvfkkv92c",
+    "host": "ec2-52-19-96-181.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres"
   },
   "production": {
     "username": "freedbtech_MHDNEZAM",
